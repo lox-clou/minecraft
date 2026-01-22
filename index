@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Web Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/zWZJ8vK.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/TextureLoader.js"></script>
+</head>
+<body>
+    <!-- Игровой интерфейс -->
+    <div id="crosshair">+</div>
+    
+    <!-- Панель инвентаря -->
+    <div id="hotbar">
+        <div class="slot active" data-slot="0">🌿</div>
+        <div class="slot" data-slot="1">🟫</div>
+        <div class="slot" data-slot="2">🪨</div>
+        <div class="slot" data-slot="3">🪵</div>
+        <div class="slot" data-slot="4">🍃</div>
+        <div class="slot" data-slot="5">💎</div>
+    </div>
+    
+    <!-- Информация -->
+    <div id="info">
+        <div>Minecraft Web Edition</div>
+        <div>WASD: Движение | Space: Прыжок | Shift: Присесть</div>
+        <div>ЛКМ: Разрушить | ПКМ: Поставить | E: Инвентарь</div>
+        <div id="position">Координаты: (0, 0, 0)</div>
+        <div id="fps">FPS: 60</div>
+    </div>
+    
+    <!-- Кнопка старта -->
+    <div id="startScreen">
+        <h1>⛏️ MINECRAFT WEB</h1>
+        <p>Клон Minecraft в браузере</p>
+        <button id="startButton">НАЧАТЬ ИГРУ</button>
+        <div class="controls">
+            <p><strong>Управление:</strong></p>
+            <p>• WASD - движение</p>
+            <p>• Мышь - осмотр</p>
+            <p>• ЛКМ/ПКМ - разрушить/поставить</p>
+            <p>• 1-6 - смена блока</p>
+            <p>• F - полёт/ходьба</p>
+        </div>
+        <div class="github">
+            <a href="https://github.com" target="_blank">⭐ Star on GitHub</a>
+        </div>
+    </div>
+    
+    <!-- Загрузка -->
+    <div id="loading">
+        <div class="loader">Генерация мира...</div>
+        <div class="progress"><div class="bar"></div></div>
+    </div>
+    
+    <!-- Скрипты -->
+    <script src="blocks.js"></script>
+    <script src="world.js"></script>
+    <script src="player.js"></script>
+    <script src="main.js"></script>
+    
+    <!-- GitHub Corners -->
+    <a href="https://github.com" target="_blank" class="github-corner">
+        <svg width="80" height="80" viewBox="0 0 250 250">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor"></path>
+        </svg>
+    </a>
+</body>
+</html>
